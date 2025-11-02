@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Çimston - Berceste Mermer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><strong>Berceste Mermer</strong></a>
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menüyü aç">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Ana navigasyon">
+        <ul class="nav-list">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="products.html">Ürünler</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Çimston Tezgahlar</h1>
+      <p class="lead">Modern ve dayanıklı yüzeyler, geniş renk skalası.</p>
+
+      <div id="gallery" class="gallery" data-path="assets/images/cimston/" data-images="01.jpg,02.jpg"></div>
+
+      <p style="margin-top:1rem;">Fotoğrafları eklemek için README'deki adımları izleyin.</p>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Kapat">✕</button>
+    <img class="lightbox-img" alt="">
+    <div class="lightbox-caption"></div>
+    <button class="lightbox-prev" aria-label="Önceki">‹</button>
+    <button class="lightbox-next" aria-label="Sonraki">›</button>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Berceste Mermer.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Berceste Mermer Mutfak Tezgahları</title>
+  <meta name="description" content="Berceste Mermer - Granit, Porselen, Kuvars ve Çimston mutfak tezgahları. Kalite ve estetik." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Berceste Mermer Mutfak Tezgahları">
+        <strong>Berceste Mermer</strong>
+      </a>
+
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menüyü aç">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Ana navigasyon">
+        <ul class="nav-list">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="products.html">Ürünler</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero" role="region" aria-label="Giriş bölümü">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Berceste Mermer - Mutfak Tezgahlarında Estetik ve Dayanıklılık</h1>
+          <p>Granit, Porselen, Kuvars ve Çimston tezgah seçenekleriyle mutfağınıza değer katıyoruz.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="products.html">Ürünlerimizi Gör</a>
+            <a class="btn btn-outline" href="#contact">İletişime Geç</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="placeholder-visual">[Berceste Mermer Görsel Alanı]</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt" aria-labelledby="about-title">
+      <div class="container about-inner">
+        <h2 id="about-title">Hakkımızda</h2>
+        <p>Berceste Mermer, mutfak tezgahları üretiminde kalite ve estetiği birleştiren bir firmadır. Müşterilerimize proje odaklı çözümler sunarız.</p>
+        <ul class="facts">
+          <li><strong>20+</strong> Yıllık Deneyim</li>
+          <li><strong>500+</strong> Kurulum</li>
+          <li><strong>100+</strong> Mutlu Müşteri</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">İletişim</h2>
+        <p>Projenizi konuşmak için bize ulaşın.</p>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">İsim <span aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" required aria-required="true" placeholder="Adınız" />
+              <span class="error" id="error-name" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="email">E-posta <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required aria-required="true" placeholder="email@ornek.com" />
+              <span class="error" id="error-email" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Mesaj</label>
+              <textarea id="message" name="message" rows="6" placeholder="Projeniz hakkında kısa bilgi"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Gönder</button>
+              <div id="form-status" role="status" aria-live="polite"></div>
+            </div>
+          </form>
+
+          <aside class="contact-info" aria-label="İletişim Bilgileri">
+            <h3>Ofis Bilgileri</h3>
+            <p><strong>Adres:</strong> Örnek Mah. 123, İstanbul</p>
+            <p><strong>Telefon:</strong> +90 555 555 5555</p>
+            <p><strong>E-posta:</strong> info@bercestemermer.com</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Berceste Mermer. Tüm hakları saklıdır.</p>
+      <nav aria-label="Footer navigation">
+        <a href="#privacy">Gizlilik</a>
+        <a href="#terms">Kullanım Şartları</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

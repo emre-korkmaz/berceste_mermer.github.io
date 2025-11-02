@@ -1,0 +1,203 @@
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --primary:#0d6efd;
+  --muted:#6b7280;
+  --accent:#0b74de;
+  --radius:12px;
+  --container:1100px;
+  --text:#0f1724;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body {
+  margin: 0;
+  background-image: url('assets/images/backgrounds/background_main.jpg'); /* Görsel yolu */
+  background-size: cover;       /* Tüm sayfayı kaplasın */
+  background-repeat: no-repeat; /* Tekrar etmesin */
+  background-position: center;  /* Ortalansın */
+  background-attachment: fixed; /* Kaydırmada sabit kalsın */
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.45;
+  font-size: 16px;
+}
+
+
+.container{
+  width:90%;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:2rem 0;
+}
+
+/* Header */
+.site-header{
+  background: transparent !important;
+  position:sticky;
+  top:0;
+  z-index:50;
+  border-bottom:1px solid rgba(15,23,36,0.04);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.brand{font-size:1.125rem; text-decoration:none; color:var(--text)}
+.primary-nav{display:block}
+.nav-list{display:flex; gap:1rem; list-style:none; margin:0; padding:0}
+.nav-list a{color:var(--muted); text-decoration:none; padding:0.5rem; border-radius:8px}
+.nav-list a:hover{color:var(--primary)}
+
+/* Mobile toggle */
+.nav-toggle{
+  display:none;
+  background:none;
+  border:0;
+  cursor:pointer;
+  padding:0.5rem;
+}
+.hamburger{
+  display:block;
+  width:22px;
+  height:2px;
+  background:var(--text);
+  position:relative;
+}
+.hamburger::before,.hamburger::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:2px;
+  background:var(--text);
+}
+.hamburger::before{top:-7px}
+.hamburger::after{top:7px}
+
+/* Hero */
+.hero{
+  padding:4rem 0;
+  background: transparent !important;
+}
+.hero-inner{display:flex; gap:2rem; align-items:center; justify-content:space-between; flex-wrap:wrap}
+.hero-copy{flex:1 1 420px; min-width:280px}
+.hero-copy h1{font-size:2rem; margin:0 0 0.5rem; line-height:1.05}
+.lead{color:var(--muted); margin-top:0.25rem}
+.hero-visual{flex:1 1 300px; min-width:240px; display:flex; align-items:center; justify-content:center}
+.placeholder-visual{padding: 4rem 0;
+  background-image: url('assets/images/backgrounds/bg.jpg');
+  background-size: cover;       /* Görsel tüm alanı kaplasın */
+  background-position: center;  /* Ortalansın */
+  background-repeat: no-repeat; /* Tekrar etmesin */
+  background-attachment: fixed; /* Sayfa kaydırıldığında sabit kalsın */
+  color: #fff;                  /* Yazılar beyaz görünsün */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); /* Yazılar net görünsün */
+}
+/* Buttons */
+.btn{display:inline-block; padding:0.6rem 1rem; border-radius:8px; text-decoration:none; font-weight:600}
+.btn-primary{background:var(--primary); color:#fff}
+.btn-outline{background:transparent; border:1px solid rgba(13,110,253,0.12); color:var(--primary)}
+
+/* Sections */
+.section{padding:3rem 0}
+.section.alt{background: transparent !important; border-top:1px solid rgba(15,23,36,0.03)}
+.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem}
+.card{background:var(--card); padding:1.25rem; border-radius:12px; box-shadow:0 6px 20px rgba(12,18,30,0.04)}
+.card h3{margin:0 0 0.5rem}
+.facts{display:flex; gap:1rem; list-style:none; padding:0; margin:1rem 0 0}
+.facts li{background:var(--card); padding:0.75rem 1rem; border-radius:12px}
+
+/* Team */
+.team-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem}
+.team-card{background:var(--card); padding:1rem; border-radius:12px; text-align:center}
+.avatar{width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,#dfeefb,#ffffff); display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:700}
+
+/* Contact */
+.contact-grid{display:grid; grid-template-columns:1fr 320px; gap:1.25rem; align-items:start}
+.contact-form{background:var(--card); padding:1rem; border-radius:12px}
+.form-row{margin-bottom:0.75rem}
+label{display:block; font-size:0.95rem; margin-bottom:0.3rem}
+input[type="text"], input[type="email"], textarea{
+  width:100%; padding:0.7rem; border-radius:8px; border:1px solid #e6e9ef; font:inherit;
+  background:transparent;
+}
+.error{color:#b00020; font-size:0.85rem; min-height:1.2rem; display:block; margin-top:0.25rem}
+.form-actions{display:flex; gap:1rem; align-items:center}
+.contact-info{background:transparent; padding:1rem}
+
+/* Gallery */
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:0.75rem; margin-top:1rem}
+.gallery figure{margin:0;background: transparent !important; border-radius:8px; overflow:hidden; display:flex; align-items:center; justify-content:center}
+.gallery img{width:100%; height:160px; object-fit:cover; display:block}
+
+/* Lightbox */
+.lightbox{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.8); z-index:1000; padding:2rem}
+.lightbox[aria-hidden="false"]{display:flex}
+.lightbox-img{max-width:90%; max-height:80%; border-radius:8px; box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+.lightbox-close{position:absolute; top:1.5rem; right:1.5rem; background:transparent; border:0; color:#fff; font-size:1.25rem; cursor:pointer}
+.lightbox-prev, .lightbox-next{position:absolute; top:50%; transform:translateY(-50%); background:transparent; border:0; color:#fff; font-size:2rem; cursor:pointer}
+.lightbox-prev{left:1rem}
+.lightbox-next{right:1rem}
+.lightbox-caption{position:absolute; bottom:2rem; color:#fff; font-size:0.95rem}
+
+/* Footer */
+.site-footer{padding:1rem 0; border-top:1px solid rgba(15,23,36,0.04); background:transparent}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; gap:1rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:720px){
+  .nav-list{display:none; flex-direction:column; background:var(--card); position:absolute; right:1rem; top:64px; padding:0.75rem; box-shadow:0 6px 20px rgba(12,18,30,0.08); border-radius:12px}
+  .nav-list.show{display:flex}
+  .nav-toggle{display:block}
+  .hero-inner{flex-direction:column}
+  .cards{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .container{padding:1rem}
+}
+
+/* === Okunabilirlik iyileştirmeleri eklendi === */
+
+:root {
+  --bg: #f7f8fb;
+  --card: rgba(255, 255, 255, 0.8);
+  --primary: #0d6efd;
+  --muted: #2b2b2b;
+  --accent: #0b74de;
+  --radius: 12px;
+  --container: 1100px;
+  --text: #1b1b1b;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Okunabilirlik ve kontrast geliştirmeleri */
+.section.alt {
+  background: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(15, 23, 36, 0.03);
+  backdrop-filter: blur(8px);
+  color: #0d0d0d;
+}
+
+body, h1, h2, h3, p {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+h1, h2, h3 {
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+p {
+  color: #1f1f1f;
+  line-height: 1.7;
+}
