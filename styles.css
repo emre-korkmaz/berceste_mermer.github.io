@@ -201,3 +201,122 @@ p {
   color: #1f1f1f;
   line-height: 1.7;
 }
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.3;
+    filter: blur(2px) grayscale(10%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0 0 1.5rem 0;
+    opacity: 0;
+    transform: scale(0.85);
+    animation: fade-in-scale 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.hero-subtitle {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    margin-bottom: 2.2rem;
+    opacity: 0;
+    animation: fade-in-description 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-button {
+    background: #fff;
+    color: #111;
+    padding: 0.85em 2em;
+    border: none;
+    border-radius: 32px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.09);
+    transition: background 0.22s, color 0.22s, transform 0.22s;
+    opacity: 0;
+    animation: fade-in-button 1.2s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.hero-button:hover {
+    background: #f6c915;
+    color: #111;
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+@keyframes fade-in-scale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in-description {
+    to { opacity: 1; }
+}
+
+@keyframes fade-in-button {
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .hero-title { font-size: 2rem; }
+    .hero-subtitle { font-size: 1.2rem;}
+    .hero-description { font-size: 1.1rem;}
+}
+
+/* Diğer eski stilleri değiştirme, sadece yukarıdaki hero-section ile ilgili olanları ekle! */
