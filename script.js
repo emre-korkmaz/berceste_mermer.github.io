@@ -152,3 +152,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    var button = document.querySelector('.hero-button');
+    if (button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            var teklifSection = document.getElementById('teklif');
+            if (teklifSection) {
+                teklifSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+});
